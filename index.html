@@ -23,13 +23,13 @@
     }
 
     .footer {
-      color: #FFD700; /* dourado */
+      color: #FFD700;
       font-size: 12px;
       margin-bottom: 16px;
     }
 
     h1 {
-      color: #FFD700; /* dourado */
+      color: #FFD700;
       font-size: 22px;
       margin-bottom: 12px;
     }
@@ -80,14 +80,13 @@
     <p>Descubra como ativar sua presença natural em qualquer ambiente.<br>
        Preencha seu nome e e-mail para começar os 7 passos estratégicos do VMP.</p>
 
-    <!-- Formulário Netlify -->
-    <form name="vmp-gratis" method="POST" data-netlify="true" action="ativacao1.html">
-      <input type="text" name="nome" placeholder="Nome (opcional)">
-      <input type="email" name="email" placeholder="E-mail (recomendado)" required>
-      <button type="submit">Iniciar as 7 Ativações</button>
-    </form>
+    <!-- Formulário com Formspree -->
+<form action="https://formspree.io/f/abc123xyz" method="POST">
+  <input type="text" name="nome" placeholder="Nome (opcional)">
+  <input type="email" name="email" placeholder="E-mail (recomendado)" required>
+  <button type="submit">Iniciar as 7 Ativações</button>
+</form>
 
   </div>
-
 </body>
-  </html>
+</html>

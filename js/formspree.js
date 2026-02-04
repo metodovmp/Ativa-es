@@ -3,13 +3,13 @@ const form = document.getElementById("leadForm");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  fetch("https://formspree.io/f/SEU_ID_REAL_AQUI", {
+  fetch("https://formspree.io/f/xgozbjdn", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify({
-      name: form.name.value,
+      nome: form.nome.value,
       email: form.email.value
     })
   })
@@ -17,7 +17,7 @@ form.addEventListener("submit", function (e) {
     if (response.ok) {
       window.location.href = "ativacao1.html";
     } else {
-      alert("Erro ao enviar. Tente novamente.");
+      alert("Erro. Tente novamente.");
     }
   })
   .catch(() => {

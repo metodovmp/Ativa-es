@@ -2,7 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Espelho da Presença - Ativação I</title>
+  <title>Espelho da Presença · Ativação I</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
@@ -19,32 +22,33 @@
     .container {
       max-width: 360px;
       width: 100%;
-      padding: 20px;
+      padding: 24px;
     }
 
     .footer {
-      color: #FFD700; /* dourado */
+      color: #FFD700;
       font-size: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
     }
 
     h1 {
-      color: #FFD700; /* dourado */
+      color: #FFD700;
       font-size: 22px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     h2 {
-      color: #fff; /* subtítulo branco */
+      font-size: 14px;
       font-weight: bold;
-      font-size: 16px;
-      margin-bottom: 24px;
+      letter-spacing: 1px;
+      margin-bottom: 22px;
     }
 
     p {
-      color: #fff;
       font-size: 14px;
-      margin-bottom: 24px;
+      line-height: 1.6;
+      margin-bottom: 32px;
     }
 
     button {
@@ -57,6 +61,7 @@
       font-weight: bold;
       font-size: 16px;
       cursor: pointer;
+      transition: opacity 0.3s ease;
     }
 
     button:hover {
@@ -64,22 +69,31 @@
     }
   </style>
 </head>
+
 <body>
 
   <div class="container">
-    <div class="footer">Presença Silenciosa VMP</div>
+
+    <div class="footer">PRESENÇA SILENCIOSA · VMP</div>
 
     <h1>Espelho da Presença</h1>
-    <h2>REALINHAMENTO:</h2>
-    <p>Alinhamento interno → notar como sua presença é percebida naturalmente.</p>
 
-    <button onclick="proximoPasso()">Continuar Ativação</button>
+    <h2>REALINHAMENTO</h2>
+
+    <p>
+      Alinhamento interno começa quando você observa sem tentar corrigir.<br><br>
+      Hoje, apenas note como sua presença é percebida naturalmente.
+    </p>
+
+    <button onclick="proximoPasso()">
+      CONTINUAR ATIVAÇÃO
+    </button>
+
   </div>
 
   <script>
     function proximoPasso() {
-      // Link da próxima ativação
-      window.location.href = "ativacao2.html"; 
+      window.location.href = "ativacao2.html";
     }
   </script>
 

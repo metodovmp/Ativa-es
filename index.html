@@ -40,7 +40,6 @@
 
     p {
       font-size: 14px;
-      font-weight: bold;
       line-height: 1.5;
       margin-bottom: 28px;
     }
@@ -83,6 +82,18 @@
     button:hover {
       opacity: 0.85;
     }
+
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .legenda {
+      font-size: 12px;
+      color: #aaa;
+    }
   </style>
 </head>
 
@@ -95,8 +106,14 @@
     <h1>Teste a Presença Silenciosa</h1>
 
     <p>
-      Descubra como ativar sua presença natural em qualquer ambiente.<br>
-      Preencha seu nome e e-mail para iniciar as 7 ativações estratégicas do VMP.
+      Existe um bloqueio emocional silencioso que enfraquece sua presença — mesmo quando você tenta se posicionar.<br><br>
+
+      O Método VMP reorganiza seu eixo interno e inicia a dissolução desse bloqueio em até 48 horas.<br>
+      Quer sentir na prática? Inicie a experiência abaixo 👇<br><br>
+
+      <span style="font-weight: bold;">
+        É rápido e você sente a diferença já nas primeiras ativações.
+      </span>
     </p>
 
     <!-- FORMULÁRIO -->
@@ -114,14 +131,17 @@
         required
       >
 
-      <button type="submit">
-        INICIAR A EXPERIÊNCIA
-      </button>
+      <div class="cta-wrapper">
+        <button type="submit">
+          INICIAR A EXPERIÊNCIA
+        </button>
+        <div class="legenda">48 horas começam agora.</div>
+      </div>
+
     </form>
 
   </div>
 
-  <!-- JS EXTERNO -->
   <script src="js/formspree.js"></script>
 
 </body>

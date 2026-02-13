@@ -69,6 +69,19 @@
     button:hover {
       opacity: 0.85;
     }
+
+    /* Ajuste da legenda separada do botão */
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* distância entre botão e legenda */
+      margin-top: 16px; /* espaço entre parágrafo e bloco do botão */
+    }
+
+    .legenda {
+      font-size: 12px;
+      color: #aaa;
+    }
   </style>
 </head>
 
@@ -88,8 +101,10 @@
       Cada movimento mantém densidade e eixo.
     </p>
 
-    <button onclick="proximoPasso()">MERGULHE NA PRESENÇA</button>
-    <div class="legenda">Correção fina, coerência natural.</div>
+    <div class="cta-wrapper">
+      <button onclick="proximoPasso()">MERGULHE NA PRESENÇA</button>
+      <div class="legenda">Correção fina, coerência natural.</div>
+    </div>
 
   <script>
     function proximoPasso() {
@@ -97,5 +112,6 @@
     }
   </script>
 
+</div>
 </body>
 </html>

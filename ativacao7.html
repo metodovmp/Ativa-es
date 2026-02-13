@@ -68,13 +68,25 @@
     button:hover {
       opacity: 0.85;
     }
+
+    /* Ajuste da legenda separada do botão */
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* distância entre botão e legenda */
+      margin-top: 16px; /* espaço entre parágrafo e bloco do botão */
+    }
+
+    .legenda {
+      font-size: 12px;
+      color: #aaa;
+    }
   </style>
 </head>
 
 <body>
 
 <div class="container">
-
     <div class="footer">PRESENÇA SILENCIOSA · VMP</div>
 
     <h1>Ritual de Passagem</h1>
@@ -86,12 +98,12 @@
       O resultado surge sem esforço.
     </p>
 
-    <button onclick="irParaCheckout()">
-      DESBLOQUEIE SUA PRESENÇA
-    </button>
-    <span class="botao-legenda">Integração completa.</span>
-
-  </div>
+    <div class="cta-wrapper">
+      <button onclick="irParaCheckout()">
+        DESBLOQUEIE SUA PRESENÇA
+      </button>
+      <div class="legenda">Integração completa.</div>
+    </div>
 
   <script>
     function irParaCheckout() {
@@ -99,5 +111,6 @@
     }
   </script>
 
+</div>
 </body>
 </html>

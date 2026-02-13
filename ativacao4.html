@@ -69,6 +69,19 @@
     button:hover {
       opacity: 0.85;
     }
+
+    /* Ajuste da legenda separada do botão */
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* distância entre botão e legenda */
+      margin-top: 16px; /* espaço entre parágrafo e bloco do botão */
+    }
+
+    .legenda {
+      font-size: 12px;
+      color: #aaa;
+    }
   </style>
 </head>
 
@@ -86,8 +99,10 @@
       O estado interno comanda. O externo reflete coerência e densidade.
     </p>
 
-    <button onclick="proximoPasso()">CENTRE-SE NO INTERNO</button>
-    <div class="legenda">O interno precede.</div>
+    <div class="cta-wrapper">
+      <button onclick="proximoPasso()">CENTRE-SE NO INTERNO</button>
+      <div class="legenda">O interno precede.</div>
+    </div>
 
   <script>
     function proximoPasso() {
@@ -95,5 +110,6 @@
     }
   </script>
 
+</div>
 </body>
 </html>

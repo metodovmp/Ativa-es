@@ -28,12 +28,11 @@
 
     .footer {
       color: #FFD700;
-  font-size: 12px;
-  color: #aaa;
-  margin-top: 16px; /* aumenta o espaço entre botão e legenda */
-  line-height: 1.4;  /* melhora a leitura da legenda */
-}
-    
+      font-size: 12px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
     h1 {
       color: #FFD700;
       font-size: 22px;
@@ -69,6 +68,19 @@
     button:hover {
       opacity: 0.85;
     }
+
+    /* Ajuste da legenda separada do botão */
+    .cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px; /* distância entre botão e legenda */
+      margin-top: 16px; /* espaço entre parágrafo e bloco do botão */
+    }
+
+    .legenda {
+      font-size: 12px;
+      color: #aaa;
+    }
   </style>
 </head>
 
@@ -86,8 +98,10 @@
       Antes da interação, a presença já se manifesta.
     </p>
 
-    <button onclick="proximoPasso()">AMPLIE O SILÊNCIO</button>
-    <div class="legenda">Silêncio ativo, presença sutil.</div>
+    <div class="cta-wrapper">
+      <button onclick="proximoPasso()">AMPLIE O SILÊNCIO</button>
+      <div class="legenda">Silêncio ativo, presença sutil.</div>
+    </div>
 
   <script>
     function proximoPasso() {
@@ -95,5 +109,6 @@
     }
   </script>
 
+</div>
 </body>
 </html>

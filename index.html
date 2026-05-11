@@ -91,36 +91,47 @@
     /* 🔹 BULLETS */
 
     .bullets{
-      text-align:left;
       margin-bottom:34px;
+
+      display:flex;
+      flex-direction:column;
+      align-items:center;
     }
 
     .bullets-title{
-  color:#FFD700;
-  font-size:15px;
-  letter-spacing:1px;
-  margin-bottom:18px;
-  font-weight:500;
-  text-align:left;
+      color:#FFD700;
+      font-size:15px;
+      letter-spacing:1px;
+      margin-bottom:20px;
+      font-weight:500;
+      text-align:center;
     }
 
-    .bullets div{
+    .bullet-item{
       margin-bottom:16px;
+
       color:#EAEAEA;
       font-size:15px;
       line-height:1.6;
-      padding-left:24px;
-      position:relative;
       font-weight:300;
+
+      width:fit-content;
+
+      position:relative;
+      padding-left:22px;
+
+      text-align:left;
     }
 
-    .bullets div::before{
+    .bullet-item::before{
       content:"•";
+
       position:absolute;
       left:0;
+      top:0;
+
       color:#FFD700;
       font-size:18px;
-      top:0;
     }
 
     /* 🔹 FORM */
@@ -215,33 +226,35 @@
   <!-- 🔹 HEADLINE -->
 
   <div class="headline">
-  <span>7 dias</span> para parar de buscar validação<br>
-  e começar a sustentar presença.
-</div>
-
-<div class="bullets-title">
-  O que começa a mudar:
-</div>
-
-<div class="bullets">
-
-  <div>
-    Mais firmeza emocional
+    <span>7 dias</span> para parar de buscar validação<br>
+    e começar a sustentar presença.
   </div>
 
-  <div>
-    Menos necessidade de aprovação
-  </div>
+  <!-- 🔹 BULLETS -->
 
-  <div>
-    Presença mais calma e consistente
-  </div>
+  <div class="bullets">
 
-  <div>
-    Ajuste interno silencioso
-  </div>
+    <div class="bullets-title">
+      O que começa a mudar:
+    </div>
 
-</div>
+    <div class="bullet-item">
+      Mais firmeza emocional
+    </div>
+
+    <div class="bullet-item">
+      Menos necessidade de aprovação
+    </div>
+
+    <div class="bullet-item">
+      Presença mais calma e consistente
+    </div>
+
+    <div class="bullet-item">
+      Ajuste interno silencioso
+    </div>
+
+  </div>
 
   <!-- 🔹 FORMULÁRIO -->
 
@@ -261,11 +274,11 @@
     >
 
     <button type="submit">
-      COMEÇAR OS 7 DIAS
+  COMEÇAR AS 7 ATIVAÇÕES
     </button>
-
+    
     <div class="legenda">
-      As ativações começam imediatamente.
+      Acesso gratuito.
     </div>
 
   </form>

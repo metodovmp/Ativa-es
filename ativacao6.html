@@ -2,113 +2,178 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Escolha Silenciosa - Ativação VI</title>
+  <title>Espelho da Presença · Ativação VI</title>
 
-  <!-- ESSENCIAL PARA TELA CHEIA NO MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      text-align: center;
+
+    body{
+      margin:0;
+      background-color:#000;
+      display:flex;
+      justify-content:center;
+      font-family:Arial,sans-serif;
+      color:#fff;
+      text-align:center;
     }
 
-    .container {
-      max-width: 360px;
-      width: 100%;
-      padding: 24px;
+    .container{
+      max-width:420px;
+      width:100%;
+      padding:28px 22px 40px;
+      box-sizing:border-box;
     }
 
-    .footer {
-      color: #FFD700;
-      font-size: 12px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
+    /* 🔹 ASSINATURA */
+
+    .footer{
+      color:#8f8f8f;
+      font-size:11px;
+      margin-bottom:16px;
+      letter-spacing:2px;
+      font-weight:300;
     }
 
-    h1 {
-      color: #FFD700;
-      font-size: 22px;
-      margin-bottom: 10px;
+    /* 🔹 IMG 16:9 */
+
+    .img-container{
+      width:100%;
+      aspect-ratio:16/9;
+      background:#111;
+      border-radius:12px;
+      overflow:hidden;
+      margin-bottom:26px;
     }
 
-    h2 {
-      font-weight: bold;
-      font-size: 14px;
-      letter-spacing: 1px;
-      margin-bottom: 22px;
+    .img-container img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    p {
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 32px;
+    /* 🔹 TÍTULO */
+
+    h1{
+      color:#FFD700;
+      font-size:25px;
+      margin-bottom:10px;
+      font-weight:600;
+      letter-spacing:1px;
     }
 
-    button {
-      width: 100%;
-      padding: 14px;
-      border-radius: 999px;
-      border: none;
-      background-color: #FFD700;
-      color: #000;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
+    /* 🔹 SUBTÍTULO */
+
+    h2{
+      color:#ffffff;
+      font-size:13px;
+      font-weight:300;
+      letter-spacing:2px;
+      margin-bottom:26px;
     }
 
-    button:hover {
-      opacity: 0.85;
+    /* 🔹 TEXTO */
+
+    p{
+      font-size:15px;
+      line-height:1.8;
+      margin-bottom:34px;
+      color:#EAEAEA;
+      font-weight:300;
     }
 
-    /* Ajuste da legenda separada do botão */
-    .cta-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 12px; /* distância entre botão e legenda */
-      margin-top: 16px; /* espaço entre parágrafo e bloco do botão */
+    /* 🔹 BOTÃO PREMIUM */
+
+    .cta-wrapper{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+      margin-top:12px;
     }
 
-    .legenda {
-      font-size: 12px;
-      color: #aaa;
+    button{
+      width:auto;
+
+      padding:16px 34px;
+
+      border-radius:999px;
+      border:none;
+
+      background-color:#FFD700;
+      color:#000;
+
+      font-weight:bold;
+      font-size:15px;
+
+      cursor:pointer;
+      transition:0.3s ease;
+
+      letter-spacing:0.5px;
     }
+
+    button:hover{
+      opacity:0.88;
+    }
+
+    /* 🔹 LEGENDA */
+
+    .legenda{
+      font-size:12px;
+      color:#888;
+      font-weight:300;
+    }
+
   </style>
 </head>
 
 <body>
 
 <div class="container">
-    <div class="footer">PRESENÇA SILENCIOSA · VMP</div>
 
-    <h1>Escolha Silenciosa</h1>
-    <h2>SILÊNCIO INTERNO</h2>
+<div class="footer">PRESENÇA SILENCIOSA · VMP</div>
 
-    <p>
-      “A mudança acontece antes de ser vista.”<br><br>
-      Pequenos ajustes internos. O campo se transforma silenciosamente.<br>
-      Antes da interação, a presença já se manifesta.
-    </p>
+<!-- 🔹 IMG TOPO -->
 
-    <div class="cta-wrapper">
-      <button onclick="proximoPasso()">AMPLIE O SILÊNCIO</button>
-      <div class="legenda">Silêncio ativo, presença sutil.</div>
+  <div class="img-container">
+    <img src="img/ativacao6.jpg"
+         onerror="this.src='img/placeholder.png'">
+  </div>
+
+  <h1>Escolha Silenciosa</h1>
+
+  <h2>SILÊNCIO INTERNO</h2>
+
+  <p>
+    A mudança começa antes de ser percebida.<br><br>
+
+    Pequenos ajustes internos alteram silenciosamente o estado que você sustenta.<br><br>
+
+    Antes mesmo da interação,<br>
+    a presença já começou a se manifestar.
+  </p>
+
+  <div class="cta-wrapper">
+
+    <button onclick="proximoPasso()">
+      AMPLIE O SILÊNCIO
+    </button>
+
+    <div class="legenda">
+      Silêncio interno. Presença sutil.
     </div>
 
-  <script>
-    function proximoPasso() {
-      window.location.href = "ativacao7.html";
-    }
-  </script>
+  </div>
 
 </div>
+
+<script>
+
+  function proximoPasso() {
+    window.location.href = "ativacao7.html";
+  }
+
+</script>
+
 </body>
 </html>

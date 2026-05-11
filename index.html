@@ -2,150 +2,266 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Teste a Presença Silenciosa</title>
+  <title>Presença Silenciosa • VMP</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      color: #fff;
-      text-align: center;
+
+    body{
+      margin:0;
+      background:#000;
+      display:flex;
+      justify-content:center;
+      font-family:Arial,sans-serif;
+      color:#fff;
+      text-align:center;
     }
 
-    .container {
-      max-width: 360px;
-      width: 100%;
-      padding: 24px;
+    .container{
+      width:100%;
+      max-width:420px;
+      padding:28px 22px 40px;
+      box-sizing:border-box;
     }
 
-    .footer {
-      color: #FFD700;
-      font-size: 12px;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-    }
+    /* 🔹 ASSINATURA SUPERIOR */
 
-    h1 {
-      color: #FFD700;
-      font-size: 22px;
-      margin-bottom: 14px;
-    }
-
-    /* ✅ TÍTULO CINZA PREMIUM */
-    .titulo-7protocolos{
-      color:#9a9a9a;
-      font-size:16px;
+    .footer{
+      color:#8f8f8f;
+      font-size:11px;
       letter-spacing:2px;
-      margin-bottom:18px;
+      margin-bottom:14px;
+      font-weight:300;
     }
 
-    p {
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 28px;
+    /* 🔹 TÍTULO PRINCIPAL */
+
+    h1{
+      color:#FFD700;
+      font-size:26px;
+      margin:0;
+      font-weight:600;
+      letter-spacing:1px;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    /* 🔹 SUBTÍTULO */
+
+    .subheadline{
+      color:#ffffff;
+      font-size:13px;
+      letter-spacing:2px;
+      margin-top:12px;
+      margin-bottom:26px;
+      font-weight:300;
     }
 
-    input {
-      width: 100%;
-      padding: 14px;
-      border-radius: 999px;
-      border: 1px solid #FFD700;
-      background-color: #000;
-      color: #FFD700;
-      font-size: 14px;
-      text-align: center;
-      outline: none;
+    /* 🔹 IMG 16:9 */
+
+    .img-container{
+      width:100%;
+      aspect-ratio:16/9;
+      background:#111;
+      border-radius:12px;
+      overflow:hidden;
+      margin-bottom:28px;
     }
 
-    input::placeholder {
-      color: #bfa84a;
+    .img-container img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    button {
-      width: 100%;
-      padding: 14px;
-      border-radius: 999px;
-      border: none;
-      background-color: #FFD700;
-      color: #000;
-      font-weight: bold;
-      font-size: 16px;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
+    /* 🔹 HEADLINE */
+
+    .headline{
+      color:#fff;
+      font-size:21px;
+      line-height:1.5;
+      margin-bottom:28px;
+      font-weight:400;
     }
 
-    button:hover {
-      opacity: 0.85;
+    .headline span{
+      color:#FFD700;
+      font-weight:500;
     }
 
-    .cta-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 16px;
+    /* 🔹 BULLETS */
+
+    .bullets{
+      text-align:left;
+      margin-bottom:34px;
     }
 
-    .legenda {
-      font-size: 12px;
-      color: #aaa;
+    .bullets-title{
+      color:#FFD700;
+      font-size:14px;
+      letter-spacing:1.5px;
+      margin-bottom:20px;
+      font-weight:300;
+      text-align:center;
     }
+
+    .bullets div{
+      margin-bottom:16px;
+      color:#EAEAEA;
+      font-size:15px;
+      line-height:1.6;
+      padding-left:24px;
+      position:relative;
+      font-weight:300;
+    }
+
+    .bullets div::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      color:#FFD700;
+      font-size:18px;
+      top:0;
+    }
+
+    /* 🔹 FORM */
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:center;
+    }
+
+    input{
+      width:100%;
+      padding:15px;
+      border-radius:999px;
+      border:1px solid #FFD700;
+      background:#000;
+      color:#FFD700;
+      font-size:14px;
+      text-align:center;
+      outline:none;
+      box-sizing:border-box;
+    }
+
+    input::placeholder{
+      color:#bfa84a;
+    }
+
+    /* 🔹 BOTÃO PREMIUM */
+
+    button{
+      width:auto;
+      align-self:center;
+
+      padding:16px 34px;
+
+      border-radius:999px;
+      border:none;
+
+      background:#FFD700;
+      color:#000;
+
+      font-weight:bold;
+      font-size:15px;
+
+      cursor:pointer;
+      transition:0.3s;
+
+      letter-spacing:0.5px;
+    }
+
+    button:hover{
+      opacity:0.88;
+    }
+
+    /* 🔹 LEGENDA */
+
+    .legenda{
+      font-size:12px;
+      color:#888;
+      margin-top:10px;
+      line-height:1.5;
+      font-weight:300;
+    }
+
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-<div class="footer">PRESENÇA SILENCIOSA · VMP</div>
+  <div class="footer">
+    PRESENÇA SILENCIOSA · VMP
+  </div>
 
-<h1>Teste a Presença Silenciosa</h1>
+  <h1>
+    PRESENÇA SILENCIOSA
+  </h1>
 
-<!-- ✅ TÍTULO REFINADO -->
-<div class="titulo-7Protocolos">
-  7 DIAS PARA REALINHAR SUA PRESENÇA
-</div>
+  <div class="subheadline">
+    FIRMEZA • PRESENÇA • CONTROLE
+  </div>
 
-<p>
-  Existe um bloqueio emocional silencioso que enfraquece sua presença — mesmo quando você tenta se posicionar.<br><br>
+  <!-- 🔹 IMG TOPO -->
 
-  Durante os próximos 7 dias, você vai passar por ativações simples que começam a reorganizar sua presença de dentro para fora.<br><br>
+  <div class="img-container">
+    <img src="img/vmp.jpg"
+         onerror="this.src='img/placeholder.png'">
+  </div>
 
-  Quer experimentar isso na prática? Inicie abaixo 👇<br><br>
+  <!-- 🔹 HEADLINE -->
 
-  <span style="font-weight: bold;">
-    São apenas alguns minutos por dia — e a mudança começa rápido.
-  </span>
-</p>
+  <div class="headline">
+    <span>7 dias</span> para parar de buscar validação<br>
+    e começar a sustentar presença.
+  </div>
 
-<!-- FORMULÁRIO -->
-<form id="leadForm">
-  <input
-    type="text"
-    name="nome"
-    placeholder="Seu nome (opcional)"
-  >
+  <!-- 🔹 BULLETS -->
 
-  <input
-    type="email"
-    name="email"
-    placeholder="Seu melhor e-mail"
-    required
-  >
+  <div class="bullets">
 
-  <div class="cta-wrapper">
+    <div class="bullets-title">
+      O que começa a mudar:
+    </div>
+
+    <div>
+      Mais firmeza emocional
+    </div>
+
+    <div>
+      Menos necessidade de aprovação
+    </div>
+
+    <div>
+      Presença mais calma e consistente
+    </div>
+
+    <div>
+      Ajuste interno silencioso
+    </div>
+
+  </div>
+
+  <!-- 🔹 FORMULÁRIO -->
+
+  <form id="leadForm">
+
+    <input
+      type="text"
+      name="nome"
+      placeholder="Seu nome (opcional)"
+    >
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Seu melhor e-mail"
+      required
+    >
+
     <button type="submit">
       COMEÇAR OS 7 DIAS
     </button>
@@ -153,13 +269,12 @@
     <div class="legenda">
       As ativações começam imediatamente.
     </div>
-  </div>
 
-    </form>
+  </form>
 
-  </div>
+</div>
 
-  <script src="js/formspree.js"></script>
+<script src="js/formspree.js"></script>
 
 </body>
 </html>

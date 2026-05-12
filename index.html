@@ -25,8 +25,6 @@
       box-sizing:border-box;
     }
 
-    /* 🔹 ASSINATURA SUPERIOR */
-
     .footer{
       color:#8f8f8f;
       font-size:11px;
@@ -34,8 +32,6 @@
       margin-bottom:14px;
       font-weight:300;
     }
-
-    /* 🔹 TÍTULO PRINCIPAL */
 
     h1{
       color:#FFD700;
@@ -45,8 +41,6 @@
       letter-spacing:1px;
     }
 
-    /* 🔹 SUBTÍTULO */
-
     .subheadline{
       color:#ffffff;
       font-size:13px;
@@ -55,8 +49,6 @@
       margin-bottom:26px;
       font-weight:300;
     }
-
-    /* 🔹 IMG 16:9 */
 
     .img-container{
       width:100%;
@@ -73,8 +65,6 @@
       object-fit:cover;
     }
 
-    /* 🔹 HEADLINE */
-
     .headline{
       color:#fff;
       font-size:21px;
@@ -88,11 +78,8 @@
       font-weight:500;
     }
 
-    /* 🔹 BULLETS */
-
     .bullets{
       margin-bottom:34px;
-
       display:flex;
       flex-direction:column;
       align-items:center;
@@ -109,46 +96,39 @@
 
     .bullet-item{
       margin-bottom:16px;
-
       color:#EAEAEA;
       font-size:15px;
       line-height:1.6;
       font-weight:300;
-
       width:fit-content;
-
       position:relative;
       padding-left:22px;
-
       text-align:left;
     }
 
     .bullet-item::before{
       content:"•";
-
       position:absolute;
       left:0;
       top:0;
-
       color:#FFD700;
       font-size:18px;
     }
 
-    /* 🔹 FORM */
-
     form{
       display:flex;
       flex-direction:column;
-      gap:16px;
+      gap:12px;
       align-items:center;
     }
 
+    /* 🔧 INPUTS PREMIUM AJUSTADOS */
     input{
       width:100%;
-      padding:15px;
+      padding:11px 14px;
       border-radius:999px;
-      border:1px solid #FFD700;
-      background:#000;
+      border:1px solid rgba(255, 215, 0, 0.7);
+      background: rgba(0,0,0,0.6);
       color:#FFD700;
       font-size:14px;
       text-align:center;
@@ -160,26 +140,22 @@
       color:#bfa84a;
     }
 
-    /* 🔹 BOTÃO PREMIUM */
+    input:focus{
+      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
+    }
 
     button{
       width:auto;
       align-self:center;
-
       padding:16px 34px;
-
       border-radius:999px;
       border:none;
-
       background:#FFD700;
       color:#000;
-
       font-weight:bold;
       font-size:15px;
-
       cursor:pointer;
       transition:0.3s;
-
       letter-spacing:0.5px;
     }
 
@@ -187,19 +163,22 @@
       opacity:0.88;
     }
 
-    /* 🔹 LEGENDA */
+    .legenda{
+      font-size:13px;
+      color:#ffffff;
+      margin-top:12px;
+      line-height:1.5;
+      font-weight:500;
+      opacity:0.92;
+    }
 
-.legenda{
-  font-size:13px;
-  color:#ffffff;
-
-  margin-top:12px;
-
-  line-height:1.5;
-  font-weight:500;
-
-  opacity:0.92;
-      }
+    .footer-final{
+      margin-top:30px;
+      font-size:11px;
+      letter-spacing:1.5px;
+      color:rgba(255,255,255,0.35);
+      text-align:center;
+    }
 
   </style>
 </head>
@@ -220,20 +199,14 @@
     FIRMEZA • PRESENÇA • CONTROLE
   </div>
 
-  <!-- 🔹 IMG TOPO -->
-
   <div class="img-container">
-  <img src="img/img0010.png" onerror="this.src='img/placeholder.png'">
+    <img src="img/img0010.png" onerror="this.src='img/placeholder.png'">
   </div>
-
-  <!-- 🔹 HEADLINE -->
 
   <div class="headline">
     <span>7 dias</span> para parar de buscar validação<br>
     e começar a sustentar presença.
   </div>
-
-  <!-- 🔹 BULLETS -->
 
   <div class="bullets">
 
@@ -241,50 +214,32 @@
       O que começa a mudar:
     </div>
 
-    <div class="bullet-item">
-      Mais firmeza emocional
-    </div>
-
-    <div class="bullet-item">
-      Menos necessidade de aprovação
-    </div>
-
-    <div class="bullet-item">
-      Presença mais calma e consistente
-    </div>
-
-    <div class="bullet-item">
-      Ajuste interno silencioso
-    </div>
+    <div class="bullet-item">Mais firmeza emocional</div>
+    <div class="bullet-item">Menos necessidade de aprovação</div>
+    <div class="bullet-item">Presença mais calma e consistente</div>
+    <div class="bullet-item">Ajuste interno silencioso</div>
 
   </div>
 
-  <!-- 🔹 FORMULÁRIO -->
-
   <form id="leadForm">
 
-    <input
-      type="text"
-      name="nome"
-      placeholder="Seu nome (opcional)"
-    >
+    <input type="text" name="nome" placeholder="Seu nome (opcional)">
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Seu melhor e-mail"
-      required
-    >
+    <input type="email" name="email" placeholder="Seu melhor e-mail" required>
 
     <button type="submit">
-  COMEÇAR AS 7 ATIVAÇÕES
+      COMEÇAR AS 7 ATIVAÇÕES
     </button>
-    
+
     <div class="legenda">
       Acesso gratuito.
     </div>
 
   </form>
+
+  <div class="footer-final">
+    © 2026 VMP · Todos os direitos reservados
+  </div>
 
 </div>
 

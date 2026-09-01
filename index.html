@@ -2,248 +2,51 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Presença Silenciosa • VMP</title>
-
+  <title>VSL AXIS • Diagnóstico</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
-
-    body{
-      margin:0;
-      background:#000;
-      display:flex;
-      justify-content:center;
-      font-family:Arial,sans-serif;
-      color:#fff;
-      text-align:center;
-    }
-
-    .container{
-      width:100%;
-      max-width:420px;
-      padding:28px 22px 40px;
-      box-sizing:border-box;
-    }
-
-    .footer{
-      color:#8f8f8f;
-      font-size:11px;
-      letter-spacing:2px;
-      margin-bottom:14px;
-      font-weight:300;
-    }
-
-    h1{
-      color:#FFD700;
-      font-size:26px;
-      margin:0;
-      font-weight:600;
-      letter-spacing:1px;
-    }
-
-    .subheadline{
-      color:#ffffff;
-      font-size:13px;
-      letter-spacing:2px;
-      margin-top:12px;
-      margin-bottom:26px;
-      font-weight:300;
-    }
-
-    .img-container{
-      width:100%;
-      aspect-ratio:16/9;
-      background:#111;
-      border-radius:12px;
-      overflow:hidden;
-      margin-bottom:28px;
-    }
-
-    .img-container img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .headline{
-      color:#fff;
-      font-size:21px;
-      line-height:1.5;
-      margin-bottom:28px;
-      font-weight:400;
-    }
-
-    .headline span{
-      color:#FFD700;
-      font-weight:500;
-    }
-
-    .bullets{
-      margin-bottom:34px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-    }
-
-    .bullets-title{
-      color:#FFD700;
-      font-size:15px;
-      letter-spacing:1px;
-      margin-bottom:20px;
-      font-weight:500;
-      text-align:center;
-    }
-
-    .bullet-item{
-      margin-bottom:16px;
-      color:#EAEAEA;
-      font-size:15px;
-      line-height:1.6;
-      font-weight:300;
-      width:fit-content;
-      position:relative;
-      padding-left:22px;
-      text-align:left;
-    }
-
-    .bullet-item::before{
-      content:"•";
-      position:absolute;
-      left:0;
-      top:0;
-      color:#FFD700;
-      font-size:18px;
-    }
-
-    form{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      align-items:center;
-    }
-
-    /* 🔧 INPUTS PREMIUM AJUSTADOS */
-    input{
-      width:100%;
-      padding:11px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255, 215, 0, 0.7);
-      background: rgba(0,0,0,0.6);
-      color:#FFD700;
-      font-size:14px;
-      text-align:center;
-      outline:none;
-      box-sizing:border-box;
-    }
-
-    input::placeholder{
-      color:#bfa84a;
-    }
-
-    input:focus{
-      box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.25);
-    }
-
-    button{
-      width:auto;
-      align-self:center;
-      padding:16px 34px;
-      border-radius:999px;
-      border:none;
-      background:#FFD700;
-      color:#000;
-      font-weight:bold;
-      font-size:15px;
-      cursor:pointer;
-      transition:0.3s;
-      letter-spacing:0.5px;
-    }
-
-    button:hover{
-      opacity:0.88;
-    }
-
-    .legenda{
-      font-size:13px;
-      color:#ffffff;
-      margin-top:12px;
-      line-height:1.5;
-      font-weight:500;
-      opacity:0.92;
-    }
-
-    .footer-final{
-      margin-top:30px;
-      font-size:11px;
-      letter-spacing:1.5px;
-      color:rgba(255,255,255,0.35);
-      text-align:center;
-    }
-
+    body{margin:0;background:#08080A;display:flex;justify-content:center;font-family:Inter,Arial,sans-serif;color:#fff}
+    .container{width:100%;max-width:480px;padding:32px 20px 40px;box-sizing:border-box;text-align:center}
+    .badge{display:inline-block;border:1px solid rgba(168,85,247,.3);background:rgba(168,85,247,.1);color:#A855F7;font-size:10px;letter-spacing:3px;font-weight:700;padding:6px 14px;border-radius:999px;margin-bottom:16px}
+    h1{font-size:22px;font-weight:900;letter-spacing:5px;margin:0}
+    .sub{color:#52525B;font-size:11px;letter-spacing:2px;margin-top:6px;margin-bottom:28px}
+    .main-title{font-size:30px;line-height:1.1;font-weight:800;margin-bottom:12px}
+    .main-title span{color:#A855F7}
+    .desc{color:#A1A1AA;font-size:14px;line-height:1.6;margin-bottom:28px}
+    .desc b{color:#fff}
+    .form-box{background:#111113;border:1px solid #232326;border-radius:20px;padding:20px;text-align:left}
+    input{width:100%;background:#08080A;border:1px solid #232326;border-radius:12px;padding:14px 16px;color:#fff;font-size:14px;box-sizing:border-box;margin-top:6px;margin-bottom:12px;outline:none;text-align:left}
+    input:focus{border-color:#A855F7}
+    button{width:100%;background:#A855F7;color:#fff;border:none;border-radius:999px;padding:16px;font-weight:800;font-size:14px;cursor:pointer;margin-top:8px}
+    .choose{font-size:11px;color:#52525B;letter-spacing:1px;margin-top:20px;margin-bottom:10px}
+    .tags{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .tag{background:#111113;border:1px solid #232326;border-radius:10px;padding:10px;font-size:12px;font-weight:600;color:#A1A1AA}
+    .footer{margin-top:32px;font-size:10px;color:#27272A}
   </style>
 </head>
-
 <body>
-
 <div class="container">
-
-  <div class="footer">
-    PRESENÇA SILENCIOSA · VMP
+  <div class="badge">VSL AXIS • INTELIGÊNCIA</div>
+  <h1>VSL AXIS</h1>
+  <div class="sub">DIAGNÓSTICO • ESTRATÉGIA • ESCALA</div>
+  <div class="main-title">SUA VSL ESTÁ <span>VAZANDO</span> DINHEIRO?</div>
+  <div class="desc">Cole sua <b>VSL</b>, sua <b>página</b>, seu <b>criativo</b> ou suas <b>métricas</b>. Nossa IA mostra em 27s onde está o gargalo.</div>
+  <div class="form-box">
+    <form id="leadForm">
+      <input type="text" name="nome" placeholder="Seu nome">
+      <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+      <button type="submit">LIBERAR MEU DIAGNÓSTICO GRÁTIS →</button>
+    </form>
   </div>
-
-  <h1>
-    PRESENÇA SILENCIOSA
-  </h1>
-
-  <div class="subheadline">
-    FIRMEZA • PRESENÇA • CONTROLE
+  <div class="choose">O QUE VOCÊ VAI DIAGNOSTICAR?</div>
+  <div class="tags">
+    <div class="tag">🎬 VSL</div>
+    <div class="tag">📄 PÁGINA</div>
+    <div class="tag">📢 ADS</div>
+    <div class="tag">📊 MÉTRICAS</div>
   </div>
-
-  <div class="img-container">
-    <img src="img/img0010.png" onerror="this.src='img/placeholder.png'">
-  </div>
-
-  <div class="headline">
-    <span>7 dias</span> para parar de buscar validação<br>
-    e começar a sustentar presença.
-  </div>
-
-  <div class="bullets">
-
-    <div class="bullets-title">
-      O que começa a mudar:
-    </div>
-
-    <div class="bullet-item">Mais firmeza emocional</div>
-    <div class="bullet-item">Menos necessidade de aprovação</div>
-    <div class="bullet-item">Presença mais calma e consistente</div>
-    <div class="bullet-item">Ajuste interno silencioso</div>
-
-  </div>
-
-  <form id="leadForm">
-
-    <input type="text" name="nome" placeholder="Seu nome (opcional)">
-
-    <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-
-    <button type="submit">
-      COMEÇAR AS 7 ATIVAÇÕES
-    </button>
-
-    <div class="legenda">
-      Acesso gratuito.
-    </div>
-
-  </form>
-
-  <div class="footer-final">
-    © 2026 VMP · Todos os direitos reservados
-  </div>
-
+  <div class="footer">© 2026 VSL AXIS</div>
 </div>
-
 <script src="js/formspree.js"></script>
-
 </body>
-</html>
+  </html>

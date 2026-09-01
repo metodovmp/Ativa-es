@@ -14,15 +14,16 @@
     .main-title span{color:#A855F7}
     .desc{color:#A1A1AA;font-size:14px;line-height:1.6;margin-bottom:28px}
     .desc b{color:#fff}
-    .form-box{background:transparent;border:none;padding:0;margin-bottom:8px}
-    input{width:100%;background:#08080A;border:1px solid #3F3F46;border-radius:12px;padding:14px 16px;color:#fff;font-size:14px;box-sizing:border-box;margin-bottom:12px;outline:none}
+    .form-box{background:transparent;border:none;padding:0;margin-bottom:8px;text-align:center}
+    input{width:100%;background:#08080A;border:1px solid #3F3F46;border-radius:12px;padding:14px 16px;color:#fff;font-size:14px;box-sizing:border-box;margin-bottom:12px;outline:none;text-align:left}
+    input::placeholder{color:#71717A}
     input:focus{border-color:#A855F7}
-    button{width:100%;background:#A855F7;color:#fff;border:none;border-radius:14px;padding:13px 16px;height:46px;font-weight:700;font-size:13px;letter-spacing:.5px;cursor:pointer;transition:.2s}
+    /* BOTÃO OVAL COLADO */
+    button{width:auto;display:inline-flex;justify-content:center;align-items:center;margin:0 auto;background:#A855F7;color:#fff;border:none;border-radius:999px;padding:12px 26px;height:44px;font-weight:800;font-size:13px;letter-spacing:.4px;cursor:pointer;transition:.2s;white-space:nowrap}
     button:hover{background:#9333EA}
-    button:disabled{opacity:.8}
     .choose{font-size:11px;color:#9CA3AF;letter-spacing:1.2px;margin-top:28px;margin-bottom:12px;font-weight:500}
-    .tags{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-    .tag{background:#111113;border:1px solid #232326;border-radius:10px;padding:12px;font-size:12px;font-weight:600;color:#A1A1AA}
+    .tags{display:grid;grid-template-columns:1fr 1fr;gap:8px;text-align:left}
+    .tag{background:#111113;border:1px solid #232326;border-radius:10px;padding:12px;font-size:12px;font-weight:600;color:#A1A1AA;text-align:center}
     .footer{margin-top:40px;padding-top:24px;border-top:1px solid #1A1A1E}
     .footer-brand{font-size:11px;color:#fff;font-weight:700;letter-spacing:2px;margin-bottom:10px}
     .footer-copy{font-size:10px;color:#52525B;line-height:1.6;max-width:360px;margin:0 auto}
@@ -52,4 +53,4 @@
 </div>
 <script src="js/formspree.js"></script>
 </body>
-  </html>
+</html>

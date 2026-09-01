@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>VSL AXIS • Analisar</title>
+  <title>AI - AXIS • Analisar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body{margin:0;background:#08080A;display:flex;justify-content:center;font-family:Inter,Arial,sans-serif;color:#fff}
@@ -18,8 +18,8 @@
     .tab.active{background:#A855F7;color:#fff;border-color:#A855F7}
     textarea{width:100%;min-height:180px;background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;color:#fff;font-size:14px;box-sizing:border-box;outline:none;resize:none}
     textarea:focus{border-color:#A855F7}
-    .btn{width:100%;background:#A855F7;color:#fff;border:none;border-radius:999px;padding:16px;font-weight:800;font-size:14px;cursor:pointer;margin-top:14px}
-    .btn:disabled{opacity:.5}
+    .btn{width:100%;background:#A855F7;color:#fff;border:none;border-radius:14px;height:46px;padding:13px 16px;font-weight:700;font-size:13px;cursor:pointer;margin-top:14px}
+    .btn:disabled{opacity:.8}
     #resultado{display:none;margin-top:24px}
     .card{background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;margin-bottom:12px;text-align:left}
     .card.free{border-left:3px solid #A855F7}
@@ -30,26 +30,23 @@
     .cta-cakto{display:none;background:#fff;color:#000;border-radius:16px;padding:20px;text-align:center;margin-top:20px}
     .cta-cakto h2{margin:0 0 8px;font-size:18px}
     .cta-cakto p{color:#52525B;font-size:13px;margin-bottom:14px}
-    .cta-cakto a{display:block;background:#A855F7;color:#fff;text-decoration:none;padding:14px;border-radius:999px;font-weight:800;font-size:14px}
+    .cta-cakto a{display:block;background:#A855F7;color:#fff;text-decoration:none;padding:13px;border-radius:14px;font-weight:700;font-size:13px}
   </style>
 </head>
 <body>
 <div class="container">
-  <div class="top">VSL AXIS • ATIVAÇÃO 1</div>
+  <div class="top">AI - AXIS • ATIVAÇÃO 1</div>
   <div class="progresso"><div></div></div>
   <h1>COLE AQUI SUA <span>VSL</span></h1>
   <div class="sub" id="subtexto">Nossa IA vai escanear onde está vazando dinheiro</div>
-  
   <div class="tabs">
     <div class="tab active" onclick="trocar('VSL',this)">🎬 VSL</div>
     <div class="tab" onclick="trocar('PÁGINA',this)">📄 PÁGINA</div>
     <div class="tab" onclick="trocar('ADS',this)">📢 ADS</div>
     <div class="tab" onclick="trocar('MÉTRICAS',this)">📊 MÉTRICAS</div>
   </div>
-
   <textarea id="conteudo" placeholder="Cole aqui sua VSL completa, script, link ou texto..."></textarea>
   <button class="btn" id="btnAnalisar" onclick="analisar()">ANALISAR AGORA →</button>
-
   <div id="resultado">
     <div class="card free">
       <h3>🔴 GARGALO 1: Gancho Fraco</h3>
@@ -67,7 +64,6 @@
       <h3>SOLUÇÃO: Estrutura de Escala</h3>
       <p>Mapa completo de como escalar essa VSL sem quebrar ROAS.</p>
     </div>
-
     <div class="cta-cakto" id="ctaCakto">
       <h2>Desbloquear Diagnóstico Completo</h2>
       <p>Veja o script corrigido, ângulos e estrutura de escala. Acesso imediato.</p>
@@ -75,7 +71,6 @@
     </div>
   </div>
 </div>
-
 <script>
   let tipo = 'VSL';
   function trocar(n, el){
@@ -100,4 +95,4 @@
   }
 </script>
 </body>
-  </html>
+</html>

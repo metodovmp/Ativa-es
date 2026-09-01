@@ -2,196 +2,102 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Espelho da Presença · Ativação I</title>
-
+  <title>VSL AXIS • Analisar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
-
-    body{
-      margin:0;
-      background-color:#000;
-      display:flex;
-      justify-content:center;
-      font-family:Arial,sans-serif;
-      color:#fff;
-      text-align:center;
-    }
-
-    .container{
-      max-width:420px;
-      width:100%;
-      padding:28px 22px 40px;
-      box-sizing:border-box;
-    }
-
-    /* 🔹 ASSINATURA */
-
-    .footer{
-      color:#8f8f8f;
-      font-size:11px;
-      margin-bottom:16px;
-      letter-spacing:2px;
-      font-weight:300;
-    }
-
-    /* 🔹 IMG 16:9 */
-
-    .img-container{
-      width:100%;
-      aspect-ratio:16/9;
-      background:#111;
-      border-radius:12px;
-      overflow:hidden;
-      margin-bottom:26px;
-    }
-
-    .img-container img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    /* 🔹 TÍTULO */
-
-    h1{
-      color:#FFD700;
-      font-size:25px;
-      margin-bottom:10px;
-      font-weight:600;
-      letter-spacing:1px;
-    }
-
-    /* 🔹 SUBTÍTULO */
-
-    h2{
-      color:#ffffff;
-      font-size:13px;
-
-      font-weight:700;
-
-      letter-spacing:2px;
-
-      margin-bottom:26px;
-
-      opacity:0.95;
-    }
-
-    /* 🔹 TEXTO */
-
-    p{
-      font-size:15px;
-      line-height:1.8;
-      margin-bottom:34px;
-      color:#EAEAEA;
-      font-weight:300;
-    }
-
-    /* 🔹 BOTÃO PREMIUM */
-
-    .cta-wrapper{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:12px;
-      margin-top:12px;
-    }
-
-    button{
-      width:auto;
-
-      padding:16px 34px;
-
-      border-radius:999px;
-      border:none;
-
-      background-color:#FFD700;
-      color:#000;
-
-      font-weight:bold;
-      font-size:15px;
-
-      cursor:pointer;
-      transition:0.3s ease;
-
-      letter-spacing:0.5px;
-    }
-
-    button:hover{
-      opacity:0.88;
-    }
-
-    /* 🔹 LEGENDA */
-
-    .legenda{
-      font-size:13px;
-      color:#ffffff;
-
-      margin-top:12px;
-
-      line-height:1.5;
-      font-weight:500;
-
-      opacity:0.92;
-    }
-
+    body{margin:0;background:#08080A;display:flex;justify-content:center;font-family:Inter,Arial,sans-serif;color:#fff}
+    .container{width:100%;max-width:520px;padding:24px 20px 40px;box-sizing:border-box}
+    .top{font-size:10px;color:#52525B;letter-spacing:3px;text-align:center;margin-bottom:14px}
+    .progresso{background:#111113;border:1px solid #232326;border-radius:999px;height:6px;overflow:hidden;margin-bottom:22px}
+    .progresso div{width:45%;height:100%;background:#A855F7}
+    h1{text-align:center;font-size:22px;font-weight:800;line-height:1.2;margin:0 0 8px}
+    h1 span{color:#A855F7}
+    .sub{text-align:center;color:#71717A;font-size:13px;margin-bottom:20px}
+    .tabs{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+    .tab{padding:10px 4px;border-radius:10px;border:1px solid #232326;background:#111113;color:#A1A1AA;font-size:11px;font-weight:700;cursor:pointer;text-align:center}
+    .tab.active{background:#A855F7;color:#fff;border-color:#A855F7}
+    textarea{width:100%;min-height:180px;background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;color:#fff;font-size:14px;box-sizing:border-box;outline:none;resize:none}
+    textarea:focus{border-color:#A855F7}
+    .btn{width:100%;background:#A855F7;color:#fff;border:none;border-radius:999px;padding:16px;font-weight:800;font-size:14px;cursor:pointer;margin-top:14px}
+    .btn:disabled{opacity:.5}
+    #resultado{display:none;margin-top:24px}
+    .card{background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;margin-bottom:12px;text-align:left}
+    .card.free{border-left:3px solid #A855F7}
+    .card.lock{border-left:3px solid #27272A;opacity:.9;position:relative}
+    .card.lock:after{content:"🔒 BLOQUEADO";position:absolute;top:12px;right:12px;font-size:9px;letter-spacing:1px;background:#27272A;padding:4px 8px;border-radius:999px;color:#A1A1AA}
+    .card h3{font-size:13px;margin:0 0 6px}
+    .card p{font-size:12px;color:#A1A1AA;line-height:1.5;margin:0}
+    .cta-cakto{display:none;background:#fff;color:#000;border-radius:16px;padding:20px;text-align:center;margin-top:20px}
+    .cta-cakto h2{margin:0 0 8px;font-size:18px}
+    .cta-cakto p{color:#52525B;font-size:13px;margin-bottom:14px}
+    .cta-cakto a{display:block;background:#A855F7;color:#fff;text-decoration:none;padding:14px;border-radius:999px;font-weight:800;font-size:14px}
   </style>
 </head>
-
 <body>
-
 <div class="container">
-
-<div class="footer">
-  PRESENÇA SILENCIOSA · VMP
-</div>
-
-<!-- 🔹 IMG TOPO -->
-<div class="img-container">
-  <img src="img/img001.jpg" onerror="this.src='img/placeholder.png'">
-</div>
-
-<div class="progresso">
-  Ativação 1 de 7
-</div>
-
-<h1>
-  01 · Espelho da Presença
-</h1>
-
-<h2>
-  REALINHAMENTO
-</h2>
-
-<p>
-  A presença começa antes da expressão.<br><br>
-
-  Observe sem tentar controlar.<br>
-  O eixo interno responde ao estado que você sustenta.<br><br>
-
-  Quando o interno se alinha,<br>
-  a presença deixa de ser esforço.
-</p>
-
-<div class="cta-wrapper">
-
-  <button onclick="proximoPasso()">
-    PROSSIGA COM ATENÇÃO
-  </button>
-
-  <div class="legenda">
-    O interno precede o externo
+  <div class="top">VSL AXIS • ATIVAÇÃO 1</div>
+  <div class="progresso"><div></div></div>
+  <h1>COLE AQUI SUA <span>VSL</span></h1>
+  <div class="sub" id="subtexto">Nossa IA vai escanear onde está vazando dinheiro</div>
+  
+  <div class="tabs">
+    <div class="tab active" onclick="trocar('VSL',this)">🎬 VSL</div>
+    <div class="tab" onclick="trocar('PÁGINA',this)">📄 PÁGINA</div>
+    <div class="tab" onclick="trocar('ADS',this)">📢 ADS</div>
+    <div class="tab" onclick="trocar('MÉTRICAS',this)">📊 MÉTRICAS</div>
   </div>
 
+  <textarea id="conteudo" placeholder="Cole aqui sua VSL completa, script, link ou texto..."></textarea>
+  <button class="btn" id="btnAnalisar" onclick="analisar()">ANALISAR AGORA →</button>
+
+  <div id="resultado">
+    <div class="card free">
+      <h3>🔴 GARGALO 1: Gancho Fraco</h3>
+      <p>Seus primeiros 7 segundos estão com retenção de 38%. O padrão AXIS é >72%. Está perdendo 62% da audiência aqui.</p>
+    </div>
+    <div class="card free">
+      <h3>🔴 GARGALO 2: CTA Morto</h3>
+      <p>Seu CTA não cria urgência real. Identificamos queda de 47% na hora do pitch.</p>
+    </div>
+    <div class="card lock">
+      <h3>SOLUÇÃO: Script Corrigido AXIS</h3>
+      <p>Novo gancho de 7s + ângulo de oferta + CTA de alta pressão pronto pra copiar e colar.</p>
+    </div>
+    <div class="card lock">
+      <h3>SOLUÇÃO: Estrutura de Escala</h3>
+      <p>Mapa completo de como escalar essa VSL sem quebrar ROAS.</p>
+    </div>
+
+    <div class="cta-cakto" id="ctaCakto">
+      <h2>Desbloquear Diagnóstico Completo</h2>
+      <p>Veja o script corrigido, ângulos e estrutura de escala. Acesso imediato.</p>
+      <a href="https://SEU-LINK-DA-CAKTO-AQUI" target="_blank">LIBERAR ACESSO AXIS PRO →</a>
+    </div>
+  </div>
 </div>
 
 <script>
-
-  function proximoPasso() {
-    window.location.href = "ativacao2.html";
+  let tipo = 'VSL';
+  function trocar(n, el){
+    tipo = n;
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelector('h1').innerHTML = `COLE AQUI SUA <span>${n}</span>`;
+    document.getElementById('conteudo').placeholder = `Cole aqui sua ${n} completa...`;
   }
-
+  function analisar(){
+    const txt = document.getElementById('conteudo').value.trim();
+    if(txt.length < 20){ alert('Cole pelo menos 20 caracteres pra analisar'); return; }
+    const btn = document.getElementById('btnAnalisar');
+    btn.innerText = 'ANALISANDO... 27s';
+    btn.disabled = true;
+    setTimeout(()=>{
+      document.getElementById('resultado').style.display='block';
+      document.getElementById('ctaCakto').style.display='block';
+      btn.innerText = 'ANÁLISE CONCLUÍDA ✓';
+      document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
+    }, 2500);
+  }
 </script>
-
 </body>
-</html>
+  </html>

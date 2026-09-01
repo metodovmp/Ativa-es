@@ -9,11 +9,11 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  // GATILHO
+  // GATILHO OTIMIZADO
   btn.innerText = "Analisando seu funil…";
   btn.disabled = true;
-  setTimeout(() => { btn.innerText = "Preparando diagnóstico…"; }, 600);
-  setTimeout(() => { btn.innerText = "Ajustando leitura…"; }, 1200);
+  setTimeout(() => { btn.innerText = "Mapeando vazamentos…"; }, 700);
+  setTimeout(() => { btn.innerText = "Gerando diagnóstico…"; }, 1400);
 
   fetch("https://formspree.io/f/xgozbjdn", {
     method: "POST",

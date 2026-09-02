@@ -6,33 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body{margin:0;background:#08080A;display:flex;justify-content:center;font-family:Inter,Arial,sans-serif;color:#fff}
-   .container{width:100%;max-width:520px;padding:24px 20px 40px;box-sizing:border-box}
-   .top{font-size:10px;color:#A1A1AA;letter-spacing:3px;text-align:center;margin-bottom:14px}
-   .progresso{background:#111113;border:1px solid #232326;border-radius:999px;height:6px;overflow:hidden;margin-bottom:22px}
-   .progresso div{width:45%;height:100%;background:#A855F7}
+  .container{width:100%;max-width:520px;padding:24px 20px 40px;box-sizing:border-box}
+  .top{font-size:10px;color:#A1A1AA;letter-spacing:3px;text-align:center;margin-bottom:14px}
+  .progresso{background:#111113;border:1px solid #232326;border-radius:999px;height:6px;overflow:hidden;margin-bottom:22px}
+  .progresso div{width:45%;height:100%;background:#A855F7}
     h1{text-align:center;font-size:22px;font-weight:800;line-height:1.2;margin:0 0 8px}
     h1 span{color:#A855F7}
-   .sub{text-align:center;color:#71717A;font-size:13px;line-height:1.5;margin-bottom:20px}
-   .tabs{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:14px}
-   .tab{padding:10px 4px;border-radius:10px;border:1px solid #232326;background:#111113;color:#A1A1AA;font-size:11px;font-weight:700;cursor:pointer;text-align:center;transition:.2s}
-   .tab.active{background:#A855F7;color:#fff;border-color:#A855F7}
+  .sub{text-align:center;color:#71717A;font-size:13px;line-height:1.5;margin-bottom:20px}
+  .tabs{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+  .tab{padding:10px 4px;border-radius:10px;border:1px solid #232326;background:#111113;color:#A1A1AA;font-size:11px;font-weight:700;cursor:pointer;text-align:center;transition:.2s}
+  .tab.active{background:#A855F7;color:#fff;border-color:#A855F7}
     textarea{width:100%;min-height:180px;background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;color:#fff;font-size:14px;box-sizing:border-box;outline:none;resize:none}
     textarea:focus{border-color:#A855F7}
-   .btn{display:flex;width:max-content;max-width:100%;margin:14px auto 0;background:#A855F7;color:#fff;border:none;border-radius:999px;min-height:46px;padding:0 30px;align-items:center;justify-content:center;font-weight:800;font-size:13px;letter-spacing:.3px;cursor:pointer;transition:.2s;white-space:nowrap;box-sizing:border-box}
-   .btn:hover{background:#9333EA}
-   .btn:disabled{opacity:.8;cursor:wait}
+  .btn{display:flex;width:max-content;max-width:100%;margin:14px auto 0;background:#A855F7;color:#fff;border:none;border-radius:999px;min-height:46px;padding:0 30px;align-items:center;justify-content:center;font-weight:800;font-size:13px;letter-spacing:.3px;cursor:pointer;transition:.2s;white-space:nowrap;box-sizing:border-box}
+  .btn:hover{background:#9333EA}
+  .btn:disabled{opacity:.8;cursor:wait}
     #resultado{display:none;margin-top:24px}
-   .card{background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;margin-bottom:12px;text-align:left}
-   .card.free{border-left:3px solid #A855F7}
-   .card.lock{border-left:3px solid #27272A;opacity:.9;position:relative}
-   .card.lock:after{content:"🔒 BLOQUEADO";position:absolute;top:12px;right:12px;font-size:9px;letter-spacing:1px;background:#27272A;padding:4px 8px;border-radius:999px;color:#A1A1AA}
-   .card h3{font-size:13px;margin:0 0 6px}
-   .card p{font-size:12px;color:#A1A1AA;line-height:1.5;margin:0;white-space:pre-wrap}
-   .cta-cakto{display:none;background:#fff;color:#000;border-radius:16px;padding:20px;text-align:center;margin-top:20px}
-   .cta-cakto h2{margin:0 0 8px;font-size:18px}
-   .cta-cakto p{color:#52525B;font-size:13px;margin-bottom:14px}
-   .cta-cakto a{display:block;background:#A855F7;color:#fff;text-decoration:none;padding:13px;border-radius:14px;font-weight:700;font-size:13px}
-   .demo-note{font-size:10px;color:#52525B;line-height:1.5;text-align:center;margin-top:12px}
+  .card{background:#111113;border:1px solid #232326;border-radius:16px;padding:16px;margin-bottom:12px;text-align:left}
+  .card.free{border-left:3px solid #A855F7}
+  .card.lock{border-left:3px solid #27272A;opacity:.9;position:relative}
+  .card.lock:after{content:"🔒 BLOQUEADO";position:absolute;top:12px;right:12px;font-size:9px;letter-spacing:1px;background:#27272A;padding:4px 8px;border-radius:999px;color:#A1A1AA}
+  .card h3{font-size:13px;margin:0 0 6px}
+  .card p{font-size:12px;color:#A1A1AA;line-height:1.5;margin:0;white-space:pre-wrap}
+  .cta-cakto{display:none;background:#fff;color:#000;border-radius:16px;padding:20px;text-align:center;margin-top:20px}
+  .cta-cakto h2{margin:0 0 8px;font-size:18px}
+  .cta-cakto p{color:#52525B;font-size:13px;margin-bottom:14px}
+  .cta-cakto a{display:block;background:#A855F7;color:#fff;text-decoration:none;padding:13px;border-radius:14px;font-weight:700;font-size:13px}
+  .demo-note{font-size:10px;color:#52525B;line-height:1.5;text-align:center;margin-top:12px}
     @media(max-width:380px){.btn{width:100%;padding:0 20px}.tabs{gap:6px}.tab{font-size:10px}}
   </style>
 </head>
@@ -56,7 +56,7 @@
     <div class="card lock"><h3>SOLUÇÃO: Script Corrigido AXIS</h3><p>Novo gancho + ângulo de oferta + CTA estruturado para você aplicar no seu próximo teste.</p></div>
     <div class="card lock"><h3>SOLUÇÃO: Estrutura de Escala</h3><p>Mapa completo dos principais pontos a observar antes de aumentar o investimento no funil.</p></div>
     <div class="cta-cakto" id="ctaCakto"><h2>Desbloquear Diagnóstico Completo</h2><p>Veja a análise completa, recomendações e próximos passos para o seu funil.</p><a href="https://SEU-LINK-DA-CAKTO-AQUI" target="_blank" rel="noopener noreferrer">LIBERAR ACESSO AXIS PRO →</a></div>
-    <div class="demo-note">Diagnóstico gerado por IA - Gemini 2.0 Flash</div>
+    <div class="demo-note">Diagnóstico gerado por IA - Gemini 2.5 Flash</div>
   </div>
 </div>
 <script>
@@ -89,7 +89,7 @@
     document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
     const prompt = `Você é o AXIS, especialista em funil. Analise esse conteúdo de ${tipo}: "${txt.slice(0,3500)}". Responda APENAS JSON válido sem markdown: {"g1_titulo":"🔴 GARGALO 1:...","g1_texto":"análise direta 2 linhas","g2_titulo":"🟠 GARGALO 2:...","g2_texto":"análise direta 2 linhas"}`;
     try{
-      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}]})});
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}]})});
       const d = await r.json();
       if(d.error) throw new Error(d.error.message);
       let t = d.candidates[0].content.parts[0].text.replace(/```json|```/g,'').trim();
@@ -106,4 +106,4 @@
   }
 </script>
 </body>
-  </html>
+</html>

@@ -1,39 +1,60 @@
 const form = document.getElementById("leadForm");
 const btn = document.getElementById("btnDiagnostico");
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const email = form.email.value.trim();
-  if (!email || !email.includes('@')) {
-    alert("Coloca um e-mail válido");
-    return;
-  }
+if (form && btn) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  // GATILHO OTIMIZADO
-  btn.innerText = "Analisando seu funil…";
-  btn.disabled = true;
-  setTimeout(() => { btn.innerText = "Mapeando vazamentos…"; }, 700);
-  setTimeout(() => { btn.innerText = "Gerando diagnóstico…"; }, 1400);
+    const email = form.email.value.trim();
 
-  fetch("https://formspree.io/f/xgozbjdn", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: email })
-  })
-  .then(response => {
-    if (response.ok) {
-      localStorage.setItem('vsl_axis_email', email);
-      btn.innerText = "✓ Diagnóstico liberado…";
-      setTimeout(() => { window.location.href = "ativacao1.html"; }, 500);
-    } else {
-      btn.disabled = false;
-      btn.innerText = "LIBERAR MEU DIAGNÓSTICO GRÁTIS →";
-      alert("Erro. Tente novamente.");
+    // Validação simples e segura do e-mail
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!emailValido) {
+      alert("Coloca um e-mail válido");
+      form.email.focus();
+      return;
     }
-  })
-  .catch(() => {
-    btn.disabled = false;
-    btn.innerText = "LIBERAR MEU DIAGNÓSTICO GRÁTIS →";
-    alert("Erro de conexão.");
+
+    // GATILHO DE ANÁLISE
+    btn.innerText = "Analisando seu funil…";
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerText = "Mapeando vazamentos…";
+    }, 700);
+
+    setTimeout(() => {
+      btn.innerText = "Gerando diagnóstico…";
+    }, 1400);
+
+    fetch("https://formspree.io/f/xgozbjdn", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        email: email
+      })
+    })
+      .then(response => {
+        if (response.ok) {
+          localStorage.setItem("vsl_axis_email", email);
+
+          btn.innerText = "✓ Diagnóstico liberado…";
+
+          setTimeout(() => {
+            window.location.href = "ativacao1.html";
+          }, 500);
+        } else {
+          throw new Error("Falha no envio");
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.innerText = "LIBERAR MEU DIAGNÓSTICO GRÁTIS →";
+        alert("Não conseguimos liberar seu diagnóstico agora. Tente novamente.");
+      });
   });
-});
+    }
